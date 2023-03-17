@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chislo_odin">Введите число 1:</string>
+    <string name="operacia">Введите операцию:</string>
+    <string name="chislo_dva">Введите второе число:</string>
+    <string name="Rezultat">Результат:</string>
+    <string name="schet">Посчитать</string>
+    <string name="opisanie">Введите число</string>
+    <string name="for_example1">Например, 25</string>
+</resources>

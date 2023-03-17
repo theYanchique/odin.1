@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">odin</string>
+    <string name="chislo_odin">Введите первое число:</string>
+    <string name="operacia">Введите операцию:</string>
+    <string name="chislo_dva">Введите второе число:</string>
+    <string name="Rezultat">Результат:</string>
+    <string name="schet">Посчитать</string>
+    <string name="divide_zero">Нельзя делить на ноль</string>
+    <string name="null_data">Надо заполнить все поля</string>
+    <string name="wrong_format">Неверный формат данных</string>
+    <string name="wrong_operation">Используйте только + - * /</string>
+</resources>
