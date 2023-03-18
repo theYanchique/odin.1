@@ -2,6 +2,7 @@ package com.example.odin;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         float num1, num2, result = 0;
         boolean correctOperation=true;
         String operation="";
+        if(TextUtils.isEmpty(etNum1.getText().toString()) || TextUtils.isEmpty(etNum2.getText()) || TextUtils.isEmpty(etOperation.getText().toString())){
+            Toast toast=Toast.makeText(getApplicationContext(), R.string.null_data, Toast.LENGTH_LONG);
+            toast.setMargin(50, 50);
+            toast.show();
+            return;
+        }
+
         try {
             num1 = Float.parseFloat(etNum1.getText().toString());
             num2 = Float.parseFloat(etNum2.getText().toString());
@@ -59,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 toastError.cancel();
             }
             toastError = Toast.makeText(this, R.string.divide_zero, duration);
+            toastError.setMargin(50, 50);
             toastError.show();
             return;
         }
@@ -68,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             toastError.cancel();
         }
         toastError = Toast.makeText(this, R.string.null_data, duration);
+        toastError.setMargin(50, 50);
         toastError.show();
         return;
         }
@@ -77,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 toastError.cancel();
             }
             toastError = Toast.makeText(this, R.string.wrong_format, duration);
+            toastError.setMargin(50, 50);
             toastError.show();
             return;
         }
@@ -88,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 toastError.cancel();
             }
             toastError = Toast.makeText(this, R.string.wrong_operation, duration);
+            toastError.setMargin(50, 50);
             toastError.show();
             return;
         }
